@@ -99,7 +99,12 @@ export default function Projects() {
                 style={!project.image ? { background: project.imageBg } : {}}
               >
                 {project.image ? (
-                  <img src={project.image} alt={project.title} />
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 ) : (
                   <div className="project-placeholder">
                     <span>{project.title[0]}</span>

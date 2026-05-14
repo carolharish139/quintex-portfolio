@@ -49,7 +49,7 @@ a {
 .loader-brand {
   font-size: clamp(48px, 8vw, 110px);
   font-weight: 900;
-  letter-spacing: -5px;
+  letter-spacing: -2px;
 }
 
 .loader-brand span,
@@ -85,7 +85,7 @@ nav {
 .brand {
   font-size: 23px;
   font-weight: 900;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 
 .nav-links {
@@ -492,8 +492,30 @@ footer a {
     display: none;
   }
 
-  .hero-title {
-    letter-spacing: -3px;
+  /* ── Fix Hebrew bold letter-spacing on mobile ── */
+  .hero-title,
+  .video-main-title,
+  .page-title,
+  .cs-heading,
+  .what-we-offer h2,
+  .coming-soon-heading {
+    letter-spacing: -1px;
+  }
+
+  .loader-brand {
+    letter-spacing: -1px;
+  }
+
+  .category-card h2 {
+    letter-spacing: -2px;
+  }
+
+  .sb-title {
+    letter-spacing: -1px;
+  }
+
+  .coming-soon-card h3 {
+    letter-spacing: -1px;
   }
 
   .services-grid,
@@ -1181,8 +1203,9 @@ footer a {
     min-width: unset;
   }
 
-  .video-title {
-    letter-spacing: -4px;
+  .video-main-title {
+    letter-spacing: -1px;
+    font-size: clamp(32px, 7vw, 60px);
   }
 
   .category-card {

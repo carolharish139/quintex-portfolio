@@ -27,7 +27,7 @@ export default function Home() {
     <>
       {/* ── VIDEO HERO ── */}
       <section className="video-hero">
-        <video autoPlay muted loop playsInline className="video-bg">
+        <video autoPlay muted loop playsInline preload="auto" className="video-bg">
           <source src="/quintexVideo.mp4" type="video/mp4" />
         </video>
         <div className="video-overlay" />

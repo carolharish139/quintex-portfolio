@@ -4,15 +4,7 @@ import {
   FaInstagram,
   FaBullhorn,
   FaPalette,
-  FaLock,
-  FaRobot,
-  FaCog,
   FaCheck,
-  FaStar,
-  FaGlobe,
-  FaMobileAlt,
-  FaLayerGroup,
-  FaHeadset,
 } from "react-icons/fa";
 
 const adSections = [
@@ -75,41 +67,6 @@ const adSections = [
   },
 ];
 
-const comingSoon = [
-  {
-    icon: <FaRobot />,
-    title: "פתרונות AI לעסקים",
-    features: [
-      "AI Chatbots",
-      "מערכות המלצה",
-      "AI Assistants",
-      "אוטומציות חכמות",
-      "AI Workflows",
-      "AI Website Features",
-    ],
-  },
-  {
-    icon: <FaCog />,
-    title: "אוטומציות לעסקים",
-    features: [
-      "CRM Automations",
-      "WhatsApp Automations",
-      "Email Flows",
-      "Lead Management",
-      "AI Automations",
-      "Business Workflows",
-    ],
-  },
-];
-
-const offerCards = [
-  { icon: <FaPalette />, title: "עיצוב מודרני ויוקרתי" },
-  { icon: <FaRobot />, title: "שילוב AI מתקדם" },
-  { icon: <FaLayerGroup />, title: "פתרונות מותאמים לעסק" },
-  { icon: <FaMobileAlt />, title: "חוויית משתמש ברמה גבוהה" },
-  { icon: <FaStar />, title: "מיתוג טכנולוגי עתידני" },
-  { icon: <FaHeadset />, title: "שירות מקצועי ומהיר" },
-];
 
 export default function Advertising() {
   return (
@@ -173,59 +130,6 @@ export default function Advertising() {
         ))}
       </div>
 
-      {/* Coming Soon */}
-      <section className="coming-soon-section">
-        <p className="section-label">Coming Soon</p>
-        <h2 className="cs-heading">בקרוב אצל Quintex Studio</h2>
-        <div className="coming-soon-grid">
-          {comingSoon.map((item) => (
-            <motion.div
-              key={item.title}
-              className="coming-soon-card"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <span className="cs-badge">COMING SOON</span>
-              <div className="cs-lock">
-                <FaLock />
-              </div>
-              <div className="cs-icon">{item.icon}</div>
-              <h3>{item.title}</h3>
-              <div className="cs-features">
-                {item.features.map((f) => (
-                  <span key={f} className="cs-feature">
-                    {f}
-                  </span>
-                ))}
-              </div>
-              <div className="cs-blur-overlay" />
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* What We Offer */}
-      <section className="what-we-offer">
-        <p className="section-label">מה אנחנו מציעים</p>
-        <h2>מה Quintex Studio מציע?</h2>
-        <div className="offer-grid">
-          {offerCards.map((card, index) => (
-            <motion.div
-              key={card.title}
-              className="offer-card"
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.08 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -6 }}
-            >
-              <div className="offer-icon">{card.icon}</div>
-              <h4>{card.title}</h4>
-            </motion.div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }

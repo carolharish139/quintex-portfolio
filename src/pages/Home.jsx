@@ -2,8 +2,54 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaLock,
+  FaRobot,
+  FaCog,
+  FaPalette,
+  FaLayerGroup,
+  FaMobileAlt,
+  FaStar,
+  FaHeadset,
+} from "react-icons/fa";
 import { FiMonitor, FiBarChart2 } from "react-icons/fi";
+
+const comingSoon = [
+  {
+    icon: <FaRobot />,
+    title: "פתרונות AI לעסקים",
+    features: [
+      "AI Chatbots",
+      "מערכות המלצה",
+      "AI Assistants",
+      "אוטומציות חכמות",
+      "AI Workflows",
+      "AI Website Features",
+    ],
+  },
+  {
+    icon: <FaCog />,
+    title: "אוטומציות לעסקים",
+    features: [
+      "CRM Automations",
+      "WhatsApp Automations",
+      "Email Flows",
+      "Lead Management",
+      "AI Automations",
+      "Business Workflows",
+    ],
+  },
+];
+
+const offerCards = [
+  { icon: <FaPalette />, title: "עיצוב מודרני ויוקרתי" },
+  { icon: <FaRobot />, title: "שילוב AI מתקדם" },
+  { icon: <FaLayerGroup />, title: "פתרונות מותאמים לעסק" },
+  { icon: <FaMobileAlt />, title: "חוויית משתמש ברמה גבוהה" },
+  { icon: <FaStar />, title: "מיתוג טכנולוגי עתידני" },
+  { icon: <FaHeadset />, title: "שירות מקצועי ומהיר" },
+];
 
 export default function Home() {
   const form = useRef();
@@ -137,6 +183,60 @@ export default function Home() {
             לעמוד הפרסום <FaArrowRight />
           </Link>
         </motion.div>
+      </section>
+
+      {/* ── WHAT WE OFFER ── */}
+      <section className="what-we-offer">
+        <p className="section-label">מה אנחנו מציעים</p>
+        <h2>מה Quintex Studio מציע?</h2>
+        <div className="offer-grid">
+          {offerCards.map((card, index) => (
+            <motion.div
+              key={card.title}
+              className="offer-card"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.08 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+            >
+              <div className="offer-icon">{card.icon}</div>
+              <h4>{card.title}</h4>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── COMING SOON ── */}
+      <section className="coming-soon-section">
+        <p className="section-label">Coming Soon</p>
+        <h2 className="cs-heading">בקרוב אצל Quintex Studio</h2>
+        <div className="coming-soon-grid">
+          {comingSoon.map((item) => (
+            <motion.div
+              key={item.title}
+              className="coming-soon-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="cs-badge">COMING SOON</span>
+              <div className="cs-lock">
+                <FaLock />
+              </div>
+              <div className="cs-icon">{item.icon}</div>
+              <h3>{item.title}</h3>
+              <div className="cs-features">
+                {item.features.map((f) => (
+                  <span key={f} className="cs-feature">
+                    {f}
+                  </span>
+                ))}
+              </div>
+              <div className="cs-blur-overlay" />
+            </motion.div>
+          ))}
+        </div>
       </section>
     </>
   );

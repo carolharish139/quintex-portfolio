@@ -188,7 +188,7 @@ export default function Home() {
       {/* ── WHAT WE OFFER ── */}
       <section className="what-we-offer">
         <p className="section-label">מה אנחנו מציעים</p>
-        <h2>מה Quintex Studio מציע?</h2>
+        <h2>מה Quintex Studio<br />מציע?</h2>
         <div className="offer-grid">
           {offerCards.map((card, index) => (
             <motion.div
@@ -210,7 +210,9 @@ export default function Home() {
       {/* ── COMING SOON ── */}
       <section className="coming-soon-section">
         <p className="section-label">Coming Soon</p>
-        <h2 className="cs-heading">בקרוב אצל Quintex Studio</h2>
+        <h2 className="cs-heading">
+          בקרוב אצל<br />Quintex Studio
+        </h2>
         <div className="coming-soon-grid">
           {comingSoon.map((item) => (
             <motion.div

@@ -84,7 +84,7 @@ export default function Advertising() {
         >
           <p className="eyebrow">QUINTEX STUDIO · ADVERTISING</p>
           <h1 className="page-title">
-            פרסום דיגיטלי לעסקים שרוצים להיראות גדולים יותר
+            פרסום דיגיטלי לעסקים<br />שרוצים להיראות גדולים יותר
           </h1>
           <p className="page-subtitle">
             סרטוני AI, מודעות, תוכן ומיתוג שמעניקים לעסק נוכחות מקצועית ברשת.

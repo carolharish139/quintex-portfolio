@@ -1,7 +1,7 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   FaArrowRight,
   FaLock,
@@ -13,7 +13,7 @@ import {
   FaStar,
   FaHeadset,
 } from "react-icons/fa";
-import { FiMonitor, FiBarChart2 } from "react-icons/fi";
+import { FiMonitor, FiBarChart2, FiSmartphone } from "react-icons/fi";
 
 const comingSoon = [
   {
@@ -54,6 +54,15 @@ const offerCards = [
 export default function Home() {
   const form = useRef();
   const [status, setStatus] = useState("");
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollToContact) {
+      setTimeout(() => {
+        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+      }, 80);
+    }
+  }, [location.state]);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -90,7 +99,7 @@ export default function Home() {
           <p className="eyebrow">QUINTEX STUDIO · DIGITAL EXPERIENCE AGENCY</p>
 
           <h1 className="video-main-title">
-            אתרים, פרסום ותוכן דיגיטלי
+            אתרים, אפליקציות ותוכן דיגיטלי
             <br />
             לעסקים שרוצים להיראות פרימיום
           </h1>
@@ -133,7 +142,7 @@ export default function Home() {
                 <option value="דף נחיתה">דף נחיתה</option>
                 <option value="פרסום לעסק">פרסום לעסק</option>
                 <option value="סרטון AI">סרטון AI</option>
-                <option value="תוכן לרשתות חברתיות">תוכן לרשתות חברתיות</option>
+                <option value="פיתוח אפליקציה">פיתוח אפליקציה</option>
                 <option value="אחר">אחר</option>
               </select>
             </div>
@@ -181,6 +190,25 @@ export default function Home() {
           <p>סרטוני AI, מודעות, תוכן לרשתות חברתיות ומיתוג דיגיטלי.</p>
           <Link to="/advertising" className="category-btn cat-btn-cyan">
             לעמוד הפרסום <FaArrowRight />
+          </Link>
+        </motion.div>
+
+        <motion.div
+          className="category-card category-card-app"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          whileHover={{ y: -8 }}
+        >
+          <div className="category-num">03</div>
+          <div className="category-icon cat-app">
+            <FiSmartphone />
+          </div>
+          <h2>אפליקציות</h2>
+          <p>פיתוח אפליקציות מודרניות לעסקים, מותגים וסטארטאפים ברמה גבוהה.</p>
+          <Link to="/applications" className="category-btn cat-btn-app">
+            לעמוד האפליקציות <FaArrowRight />
           </Link>
         </motion.div>
       </section>

@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Websites from "./pages/Websites";
 import Advertising from "./pages/Advertising";
 import Projects from "./pages/Projects";
+import Applications from "./pages/Applications";
 import "./App.css";
 
 function ScrollToTop() {
@@ -63,6 +64,7 @@ export default function App() {
         <Route path="/websites" element={<Websites />} />
         <Route path="/advertising" element={<Advertising />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/applications" element={<Applications />} />
       </Routes>
       <Footer />
     </main>

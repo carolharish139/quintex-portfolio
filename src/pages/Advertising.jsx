@@ -130,6 +130,89 @@ export default function Advertising() {
         ))}
       </div>
 
+      {/* ── AD EXAMPLES ── */}
+      <section className="ad-examples">
+        <p className="section-label">דוגמאות · Examples</p>
+        <h2 className="ad-examples-title">עבודות תוכן דיגיטלי שביצענו</h2>
+
+        <div className="ad-case">
+          <motion.div
+            className="ad-case-header"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="ad-case-num">01</span>
+            <div>
+              <h3>קורס מסחר בבורסה</h3>
+              <p>לוגו, פוסטים לאינסטגרם ועיצוב סטוריס מקצועי</p>
+            </div>
+          </motion.div>
+          <div className="ad-case-images">
+            <motion.div
+              className="ad-img-wrap"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+            >
+              <img src="/trendpost.png" alt="Stock market course — posts" loading="lazy" decoding="async" />
+              <span className="ad-img-label">Posts · Instagram</span>
+            </motion.div>
+            <motion.div
+              className="ad-img-wrap"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.22, duration: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+            >
+              <img src="/trendstory.png" alt="Stock market course — stories" loading="lazy" decoding="async" />
+              <span className="ad-img-label">Stories · Instagram</span>
+            </motion.div>
+          </div>
+        </div>
+
+        <div className="ad-case">
+          <motion.div
+            className="ad-case-header"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="ad-case-num">02</span>
+            <div>
+              <h3>אתר בשמים יוקרתי</h3>
+              <p>לוגו, פוסטים לאינסטגרם ועיצוב סטוריס מקצועי</p>
+            </div>
+          </motion.div>
+          <div className="ad-case-images">
+            <motion.div
+              className="ad-img-wrap"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+            >
+              <img src="/perpost.png" alt="Perfume brand — posts" loading="lazy" decoding="async" />
+              <span className="ad-img-label">Posts · Instagram</span>
+            </motion.div>
+            <motion.div
+              className="ad-img-wrap"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.22, duration: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+            >
+              <img src="/perstory.png" alt="Perfume brand — stories" loading="lazy" decoding="async" />
+              <span className="ad-img-label">Stories · Instagram</span>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

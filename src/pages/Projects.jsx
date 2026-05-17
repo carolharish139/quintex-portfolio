@@ -57,6 +57,14 @@ const projects = [
     link: "https://dulcet-mandazi-c22efb.netlify.app/",
     tags: ["דף מכירה", "קורס דיגיטלי", "Landing Page", "Conversion"],
   },
+  {
+    title: "Fashion Store",
+    hebrew: "חנות אופנה",
+    desc: "Modern fashion website with premium shopping experience and cinematic UI design.",
+    image: "/fashion.png",
+    link: "https://tubular-caramel-115b12.netlify.app/",
+    tags: ["Fashion", "E-Commerce", "Premium UI", "Cinematic Design"],
+  },
 ];
 
 export default function Projects() {

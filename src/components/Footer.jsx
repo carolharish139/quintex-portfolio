@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
+import QxLogo from "./Logo";
 
 export default function Footer() {
   return (
     <footer>
       <div className="footer-brand">
-        <h2>
-          Quintex<span>Studio</span>
-        </h2>
+        <div style={{ marginBottom: "16px" }}>
+          <QxLogo idPrefix="footer" height={32} />
+        </div>
         <p>
           אתרים, פרסום ותוכן דיגיטלי לעסקים שרוצים להיראות פרימיום.
           <br />
@@ -19,7 +20,7 @@ export default function Footer() {
         <p>בניית אתרים</p>
         <p>דפי נחיתה</p>
         <p>סרטוני AI</p>
-        <p>תוכן לרשתות חברתיות</p>
+        <p>אפליקציות מובייל</p>
         <p>מודעות פרסום</p>
         <p>מיתוג דיגיטלי</p>
         <p className="footer-coming">פתרונות AI — Coming Soon</p>
@@ -31,8 +32,8 @@ export default function Footer() {
         <Link to="/">בית</Link>
         <Link to="/websites">אתרים</Link>
         <Link to="/advertising">פרסום</Link>
+        <Link to="/applications">אפליקציות</Link>
         <Link to="/projects">פרויקטים</Link>
-        <a href="/#contact">צור קשר</a>
         <a href="mailto:quintexstudio@gmail.com">quintexstudio@gmail.com</a>
       </div>
 

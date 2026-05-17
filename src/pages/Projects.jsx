@@ -96,6 +96,7 @@ export default function Projects() {
               href={project.link}
               target="_blank"
               rel="noreferrer"
+              aria-label={`${project.hebrew} - ${project.title} (נפתח בחלונית חדשה)`}
               key={project.title}
               initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}

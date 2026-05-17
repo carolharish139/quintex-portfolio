@@ -2,6 +2,7 @@ export default function QxLogo({ height = 38 }) {
   const fontSize = Math.round(height * 0.88);
   return (
     <span
+      aria-label="Quintex Studio"
       style={{
         fontSize: fontSize,
         fontWeight: 900,
@@ -13,8 +14,8 @@ export default function QxLogo({ height = 38 }) {
         alignItems: "center",
       }}
     >
-      <span style={{ color: "#ffffff" }}>Quintex</span>
-      <span style={{ color: "#9c82ff" }}>Studio</span>
+      <span aria-hidden="true" style={{ color: "#ffffff" }}>Quintex</span>
+      <span aria-hidden="true" style={{ color: "#9c82ff" }}>Studio</span>
     </span>
   );
 }

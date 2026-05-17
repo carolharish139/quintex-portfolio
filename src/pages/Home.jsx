@@ -82,7 +82,7 @@ export default function Home() {
     <>
       {/* ── VIDEO HERO ── */}
       <section className="video-hero">
-        <video autoPlay muted loop playsInline preload="auto" className="video-bg">
+        <video autoPlay muted loop playsInline preload="auto" className="video-bg" aria-hidden="true">
           <source src="/quintexVideo.mp4" type="video/mp4" />
         </video>
         <div className="video-overlay" />
@@ -131,12 +131,12 @@ export default function Home() {
 
           <form ref={form} onSubmit={sendEmail} dir="rtl">
             <div className="row">
-              <input name="name" placeholder="שם מלא" required />
-              <input name="from_email" type="email" placeholder="אימייל" required />
+              <input name="name" placeholder="שם מלא" aria-label="שם מלא" required />
+              <input name="from_email" type="email" placeholder="אימייל" aria-label="כתובת אימייל" required />
             </div>
             <div className="row">
-              <input name="phone" placeholder="טלפון" required />
-              <select name="project_type" required defaultValue="">
+              <input name="phone" placeholder="טלפון" aria-label="מספר טלפון" required />
+              <select name="project_type" aria-label="סוג פרויקט" required defaultValue="">
                 <option value="" disabled>סוג פרויקט</option>
                 <option value="אתר">אתר</option>
                 <option value="דף נחיתה">דף נחיתה</option>
@@ -146,7 +146,7 @@ export default function Home() {
                 <option value="אחר">אחר</option>
               </select>
             </div>
-            <textarea name="message" placeholder="הודעה..." />
+            <textarea name="message" placeholder="הודעה..." aria-label="הודעה" />
             <button type="submit">שלח הודעה ↗</button>
             {status && <p className="status">{status}</p>}
           </form>
